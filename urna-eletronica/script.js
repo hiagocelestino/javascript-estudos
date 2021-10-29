@@ -123,6 +123,7 @@ function confirma() {
             document.querySelector('.tela').innerHTML = '<div class="aviso--gigante pisca">FIM</div>';
             console.log(votos);
             desabilitarBotoes();
+	    setTimeout(reiniciarVotacao,3000);
         }
     }
 }
@@ -132,5 +133,8 @@ function desabilitarBotoes(){
         botoes[i].removeAttribute('onclick');
     }
     
+}
+function reiniciarVotacao(){
+    location.reload(true);
 }
 comecarEtapa();
